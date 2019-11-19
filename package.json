@@ -1,0 +1,41 @@
+{
+  "name": "css-for-browser-extensions",
+  "version": "0.0.1",
+  "description": "CSS for Browser extensions based on Bootstrap",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config config/build.js --progress",
+    "styleguidist-server": "styleguidist server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duduindo/css-for-browser-extensions.git"
+  },
+  "keywords": [
+    "extension",
+    "css",
+    "browser"
+  ],
+  "author": "Eduardo Paixão (@duduindo)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/duduindo/css-for-browser-extensions/issues"
+  },
+  "homepage": "https://github.com/duduindo/css-for-browser-extensions#readme",
+  "devDependencies": {
+    "css-loader": "^3.2.0",
+    "dotenv": "^8.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.13.0",
+    "react-styleguidist": "^10.2.1",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  }
+}
