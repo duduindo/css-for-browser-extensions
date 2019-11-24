@@ -1,5 +1,7 @@
 const path = require('path')
+const fs = require('fs')
 const dotenv = require('dotenv')
+const pathDocsComponents = path.resolve(__dirname, 'docs/components/')
 
 dotenv.config()
 
@@ -12,6 +14,9 @@ module.exports = {
   serverPort: port,
   title: 'CSS for browser extensions - Style Guide',
   webpackConfig: require('./config/styleguide.js'),
+  require: [
+    path.join(__dirname, './src/sass/app.sass')
+  ],
   getExampleFilename(componentPath) {
     const isPathComponents = componentPath.match('/common/components/')
     let path = null
@@ -50,11 +55,15 @@ module.exports = {
     },
     {
       name: 'Components',
-      // content: 'docs/components/ui.md',
-      components: 'src/sass/entries/common/components/*.sass',
+      sections: fs.readdirSync(pathDocsComponents).map(file => {
+        const name = file.replace('.md', '')
+        const content = `docs/components/${file}`
+
+        return {name, content}
+      }),
       exampleMode: 'expand', // 'hide' | 'collapse' | 'expand'
       usageMode: 'expand' // 'hide' | 'collapse' | 'expand'
-    }
+    },
   ],
   require: [
     path.join(__dirname, 'styleguide/global.requires.js'),
