@@ -2,26 +2,27 @@
 // Functions
 // ==========================================================================
 
+$functions-unit-font-size-base: 16px !default // Default in more browser
 
 // To EM - e.g: `to-rem(15px, 15px)` -> 1em
 // ==========================================================================
-@function to-em($pixels, $context: $font-size-base)
+@function to-em($pixels, $context: $functions-unit-font-size-base)
   @if unitless($pixels)
-    $pixels: $pixels * 1px
+    $pixels: $pixels * 1em
 
   @if unitless($context)
-    $context: $context * 1px
+    $context: $context * 1em
 
   @return $pixels / $context * 1em
 
 
 // To REM - e.g: `to-rem(15px, 15px)` -> 1rem
 // ==========================================================================
-@function to-rem($pixels, $context: $font-size-base)
+@function to-rem($pixels, $context: $functions-unit-font-size-base)
   @if unitless($pixels)
-    $pixels: $pixels * 1px
+    $pixels: $pixels * 1rem
 
   @if unitless($context)
-    $context: $context * 1px
+    $context: $context * 1rem
 
   @return $pixels / $context * 1rem

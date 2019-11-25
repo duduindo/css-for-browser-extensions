@@ -1,12 +1,12 @@
 const path = require('path')
 const fs = require('fs')
 const dotenv = require('dotenv')
-const pathDocsComponents = path.resolve(__dirname, 'docs/components/')
 
 dotenv.config()
 
 // Variables
 const port = process.env.STYLEGUIDE_PORT ? parseInt(process.env.STYLEGUIDE_PORT, 10) : 6060;
+const pathDocsComponents = path.resolve(__dirname, 'docs/components/')
 
 
 // Exports
