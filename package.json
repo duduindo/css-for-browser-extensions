@@ -32,7 +32,7 @@
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.0",
     "vue": "^2.6.10",
-    "vue-styleguidist": "^4.0.5",
+    "vue-styleguidist": "^3.22.2",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10"
   },
