@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config config/build.js --progress",
-    "styleguidist-server": "styleguidist server"
+    "styleguide": "vue-styleguidist server",
+    "styleguide:build": "vue-styleguidist build"
   },
   "repository": {
     "type": "git",
@@ -28,11 +29,10 @@
     "dotenv": "^8.2.0",
     "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^4.13.0",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-styleguidist": "^10.2.1",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.0",
+    "vue": "^2.6.10",
+    "vue-styleguidist": "^4.0.5",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10"
   },

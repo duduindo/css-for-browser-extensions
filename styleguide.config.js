@@ -15,7 +15,9 @@ module.exports = {
   title: 'CSS for browser extensions - Style Guide',
   webpackConfig: require('./config/styleguide.js'),
   require: [
-    path.join(__dirname, './src/sass/app.sass')
+    path.join(__dirname, 'styleguide/global.requires.js'),
+    path.join(__dirname, 'src/sass/app.sass'),
+    path.join(__dirname, './src/sass/styleguide.sass'),
   ],
   getExampleFilename(componentPath) {
     const isPathComponents = componentPath.match('/common/components/')
@@ -29,6 +31,18 @@ module.exports = {
 
     return pathFull
   },
+  // styles: {
+  //   Playground: { // Markdown
+  //     preview: {
+  //       backgroundColor: 'purple'
+  //     },
+  //   },
+  //   Editor: {
+  //     root: {
+  //       backgroundColor: 'lime'
+  //     }
+  //   }
+  // },
   sections: [
     {
       name: 'Introduction',
@@ -64,9 +78,5 @@ module.exports = {
       exampleMode: 'expand', // 'hide' | 'collapse' | 'expand'
       usageMode: 'expand' // 'hide' | 'collapse' | 'expand'
     },
-  ],
-  require: [
-    path.join(__dirname, 'styleguide/global.requires.js'),
-    path.join(__dirname, 'src/sass/app.sass'),
   ]
 };
