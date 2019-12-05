@@ -1,3 +1,47 @@
 // ==========================================================================
 // Tables
 // ==========================================================================
+
+
+.table
+  font-size: $table-font-size
+
+  thead
+    th, td
+      border-bottom-width: to-rem(1px)
+
+  &.table-bordered
+    tbody
+      tr
+        &:nth-child(odd)
+          background-color: lightgray
+
+      th, td
+        border-bottom-width: 0
+        border-top-width: 0
+
+
+//   &.table-bordered
+//     th, td
+//       border: $table-border-width solid $table-border-color
+//       border-bottom-width: 0
+//       border-top-width: 0
+
+//     th, td
+//       & + td
+//       & + th
+//         border-left-width: 0
+
+//       &:first-child
+//         border-right-width: 0
+
+    // td:first-child
+    //   border-right-width: 0
+
+
+
+
+    // thead
+    //   th,
+    //   td
+    //     border-bottom-width: 2 * $table-border-width
